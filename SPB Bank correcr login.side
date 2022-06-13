@@ -1,0 +1,123 @@
+{
+  "id": "a5b50764-ff04-4ba9-b839-0cb04b66ab53",
+  "version": "2.0",
+  "name": "SPB Bank Test 1",
+  "url": "https://idemo.bspb.ru",
+  "tests": [{
+    "id": "7124fbb3-c5a0-42c0-8d2b-97e9c975b327",
+    "name": "correct login spb bank",
+    "commands": [{
+      "id": "ba79d236-8e35-4d5a-8d13-f52b76b29475",
+      "comment": "",
+      "command": "open",
+      "target": "/auth?response_type=code&client_id=1&redirect_uri=https%3A%2F%2Fidemo.bspb.ru%2Flogin%2Fsuccess&prefetch_uri=https%3A%2F%2Fidemo.bspb.ru%2Flogin%2Fprefetch&force_new_session=true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0454ef52-6168-4279-910f-c379e3fa7046",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a56a3a41-30e7-4944-bdd8-8e1c9a3ae2c5",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-control:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbd667d5-97e9-4eea-b4ab-cc4f62abfaf1",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-form",
+      "targets": [
+        ["id=login-form", "id"],
+        ["css=#login-form", "css:finder"],
+        ["xpath=//form[@id='login-form']", "xpath:attributes"],
+        ["xpath=//div[@id='login-container']/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4ad189-3fab-4f57-8293-26352de88649",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [
+        ["id=login-button", "id"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//button[@id='login-button']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b88562c8-d8f5-4d0c-8898-bd6c828d4054",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container",
+      "targets": [
+        ["css=.container", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f728f10c-8ac0-426f-a621-8b8c5e42dc7f",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-form",
+      "targets": [
+        ["id=login-form", "id"],
+        ["css=#login-form", "css:finder"],
+        ["xpath=//form[@id='login-form']", "xpath:attributes"],
+        ["xpath=//div[@id='login-container']/form", "xpath:idRelative"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d8bded2-e382-4746-b3fa-b2fb1fda0658",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-otp-button",
+      "targets": [
+        ["id=login-otp-button", "id"],
+        ["css=#login-otp-button", "css:finder"],
+        ["xpath=//button[@id='login-otp-button']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d000bae1-f674-4ddb-859d-72174662da96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.icon-close",
+      "targets": [
+        ["css=.icon-close", "css:finder"],
+        ["xpath=//a[@id='logout-button']/span", "xpath:idRelative"],
+        ["xpath=//div/a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2df7a090-3ba8-4109-a535-6c5a3617f95c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7124fbb3-c5a0-42c0-8d2b-97e9c975b327"]
+  }],
+  "urls": ["https://idemo.bspb.ru/"],
+  "plugins": []
+}
